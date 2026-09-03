@@ -13,7 +13,8 @@ import {
   Award, 
   CheckCircle2, 
   Zap,
-  LogIn
+  LogIn,
+  UserPlus
 } from 'lucide-react';
 
 export const WelcomeModal: React.FC = () => {
@@ -162,19 +163,31 @@ export const WelcomeModal: React.FC = () => {
             </div>
           </div>
 
-          {/* Alternative: Open Full Login Page Modal */}
-          <div className="mt-5 pt-4 border-t border-zinc-100 w-full flex items-center justify-between text-xs text-zinc-500">
-            <span>Need custom credentials?</span>
-            <button
-              onClick={() => {
-                setIsWelcomeModalOpen(false);
-                setIsLoginModalOpen(true);
-              }}
-              className="font-bold text-indigo-600 hover:text-indigo-800 flex items-center gap-1 hover:underline"
-            >
-              <LogIn className="w-3.5 h-3.5" />
-              <span>Go to Login Portal</span>
-            </button>
+          {/* Direct Sign In / Sign Up Options */}
+          <div className="mt-5 pt-4 border-t border-zinc-100 w-full flex flex-col sm:flex-row items-center justify-between gap-3 text-xs">
+            <span className="text-zinc-500 font-medium">Already have an account or new here?</span>
+            <div className="flex items-center gap-2 w-full sm:w-auto">
+              <button
+                onClick={() => {
+                  setIsWelcomeModalOpen(false);
+                  setIsLoginModalOpen(true);
+                }}
+                className="flex-1 sm:flex-initial px-4 py-2 rounded-xl bg-zinc-100 hover:bg-zinc-200 text-zinc-800 font-bold text-xs transition-colors flex items-center justify-center gap-1.5"
+              >
+                <LogIn className="w-3.5 h-3.5 text-zinc-600" />
+                <span>Sign In</span>
+              </button>
+              <button
+                onClick={() => {
+                  setIsWelcomeModalOpen(false);
+                  setIsLoginModalOpen(true);
+                }}
+                className="flex-1 sm:flex-initial px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs transition-colors shadow-sm flex items-center justify-center gap-1.5"
+              >
+                <UserPlus className="w-3.5 h-3.5 text-emerald-100" />
+                <span>Sign Up</span>
+              </button>
+            </div>
           </div>
 
         </div>

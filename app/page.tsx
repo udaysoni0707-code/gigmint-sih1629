@@ -12,6 +12,7 @@ import { QuickBidDrawer } from '@/components/QuickBidDrawer';
 import { SkillLedgerModal } from '@/components/SkillLedgerModal';
 import { WelcomeModal } from '@/components/WelcomeModal';
 import { LoginModal } from '@/components/LoginModal';
+import { StartingSplash } from '@/components/StartingSplash';
 import { 
   Sparkles, 
   Lock, 
@@ -38,6 +39,9 @@ export default function Home() {
   return (
     <div className="min-h-screen flex flex-col justify-between selection:bg-indigo-100 selection:text-indigo-900 pb-12">
       
+      {/* Attractive Starting Entrance Animation */}
+      <StartingSplash />
+
       {/* Dynamic Toast Alert Notification */}
       {toastMessage && (
         <div className="fixed top-20 right-4 z-50 animate-in slide-in-from-top-4 fade-in duration-300">

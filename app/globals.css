@@ -69,6 +69,21 @@
   border: 1px solid rgba(39, 39, 42, 0.8);
 }
 
+/* Universal Interactive Button Animations across the entire site */
+button, [role="button"] {
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  transform-origin: center center;
+  user-select: none;
+}
+
+button:hover, [role="button"]:hover {
+  transform: translateY(-1.5px) scale(1.02);
+}
+
+button:active, [role="button"]:active {
+  transform: translateY(0.5px) scale(0.96) !important;
+}
+
 /* Custom subtle scrollbars */
 ::-webkit-scrollbar {
   width: 6px;
