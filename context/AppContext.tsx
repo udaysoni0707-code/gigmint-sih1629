@@ -59,6 +59,21 @@ interface AppContextType {
   // Project Scoper
   addNewProject: (newGig: GigProject) => void;
 
+  // Auth & Welcome
+  isWelcomeModalOpen: boolean;
+  setIsWelcomeModalOpen: (open: boolean) => void;
+  isLoginModalOpen: boolean;
+  setIsLoginModalOpen: (open: boolean) => void;
+  currentUser: {
+    name: string;
+    role: UserRole;
+    avatar: string;
+    email: string;
+    psdmId?: string;
+  } | null;
+  loginUser: (role: UserRole, customName?: string, email?: string) => void;
+  logoutUser: () => void;
+
   // Notification / Toast
   toastMessage: string | null;
   showToast: (msg: string) => void;
@@ -82,11 +97,56 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
   const [activeMilestoneIndex, setActiveMilestoneIndex] = useState<number>(1); // Milestone 2
 
   // Modals state
+  const [isWelcomeModalOpen, setIsWelcomeModalOpen] = useState(true);
+  const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
   const [isEscrowModalOpen, setIsEscrowModalOpen] = useState(false);
   const [isScoperModalOpen, setIsScoperModalOpen] = useState(false);
   const [isQuickBidOpen, setIsQuickBidOpen] = useState(false);
   const [isLedgerModalOpen, setIsLedgerModalOpen] = useState(false);
   const [selectedGigForBid, setSelectedGigForBid] = useState<GigProject | null>(INITIAL_GIGS[0]);
+
+  // Current User Auth State
+  const [currentUser, setCurrentUser] = useState<{
+    name: string;
+    role: UserRole;
+    avatar: string;
+    email: string;
+    psdmId?: string;
+  } | null>({
+    name: INITIAL_FREELANCER.name,
+    role: 'freelancer',
+    avatar: INITIAL_FREELANCER.avatar,
+    email: 'gurpreet.dev@psdm.in',
+    psdmId: 'PB-PSDM-2024-AI-89421',
+  });
+
+  const loginUser = (newRole: UserRole, customName?: string, email?: string) => {
+    setRole(newRole);
+    if (newRole === 'freelancer') {
+      setCurrentUser({
+        name: customName || INITIAL_FREELANCER.name,
+        role: 'freelancer',
+        avatar: INITIAL_FREELANCER.avatar,
+        email: email || 'gurpreet.dev@psdm.in',
+        psdmId: 'PB-PSDM-2024-AI-89421',
+      });
+    } else {
+      setCurrentUser({
+        name: customName || 'Harjit Chawla',
+        role: 'client',
+        avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80',
+        email: email || 'harjit@amritsarafro.com',
+        psdmId: 'PB-MSME-2024-9182',
+      });
+    }
+    setIsLoginModalOpen(false);
+    showToast(`🎉 Logged in as ${customName || (newRole === 'freelancer' ? INITIAL_FREELANCER.name : 'Harjit Chawla')} (${newRole === 'freelancer' ? 'PSDM Trainee' : 'MSME Employer'})!`);
+  };
+
+  const logoutUser = () => {
+    setCurrentUser(null);
+    showToast('👋 You have been logged out.');
+  };
 
   // Toast
   const [toastMessage, setToastMessage] = useState<string | null>(null);
@@ -271,6 +331,13 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
         openQuickBid,
         updateTaskColumn,
         addNewProject,
+        isWelcomeModalOpen,
+        setIsWelcomeModalOpen,
+        isLoginModalOpen,
+        setIsLoginModalOpen,
+        currentUser,
+        loginUser,
+        logoutUser,
         toastMessage,
         showToast,
       }}

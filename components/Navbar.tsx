@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { useApp } from '@/context/AppContext';
+import Link from 'next/link';
 import { 
   ShieldCheck, 
   Sparkles, 
@@ -12,7 +13,8 @@ import {
   Award, 
   ArrowRight,
   User,
-  Building2
+  Building2,
+  LogIn
 } from 'lucide-react';
 
 export const Navbar: React.FC = () => {
@@ -24,6 +26,9 @@ export const Navbar: React.FC = () => {
     setIsScoperModalOpen,
     setIsEscrowModalOpen,
     setIsLedgerModalOpen,
+    setIsWelcomeModalOpen,
+    setIsLoginModalOpen,
+    currentUser,
     escrowAmount
   } = useApp();
 
@@ -31,18 +36,19 @@ export const Navbar: React.FC = () => {
     <header className="sticky top-4 z-40 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full transition-all">
       <nav className="glass-pill rounded-full px-4 py-2.5 shadow-bento flex items-center justify-between border border-zinc-200/80">
         
-        {/* Brand Logo & PSDM Tag */}
+        {/* Brand Logo & PSDM Tag (Clicking pops up welcome window) */}
         <div className="flex items-center gap-3">
           <button 
-            onClick={() => setActiveTab('dashboard')}
+            onClick={() => setIsWelcomeModalOpen(true)}
             className="flex items-center gap-2.5 group text-left"
+            title="Click for GigMint & PSDM Overview"
           >
             <div className="w-10 h-10 rounded-2xl bg-indigo-600 flex items-center justify-center text-white font-bold shadow-md shadow-indigo-200 group-hover:scale-105 transition-transform">
               <span className="text-xl tracking-tight">G</span>
             </div>
             <div>
               <div className="flex items-center gap-1.5">
-                <span className="font-bold text-lg tracking-tight text-zinc-900">GigMint</span>
+                <span className="font-bold text-lg tracking-tight text-zinc-900 group-hover:text-indigo-600 transition-colors">GigMint</span>
                 <span className="text-[10px] uppercase font-mono font-semibold px-1.5 py-0.5 rounded-full bg-emerald-100 text-emerald-700 border border-emerald-200 flex items-center gap-1">
                   <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
                   SIH 1629
@@ -155,6 +161,32 @@ export const Navbar: React.FC = () => {
               <span>MSME / Client</span>
             </button>
           </div>
+
+          {/* Sign In / User Profile Pill */}
+          {currentUser ? (
+            <button
+              onClick={() => setIsLoginModalOpen(true)}
+              className="flex items-center gap-1.5 p-1 sm:pr-2.5 rounded-full bg-white border border-zinc-200/90 hover:border-indigo-300 shadow-sm transition-all"
+              title={`Logged in as ${currentUser.name}. Click to switch account.`}
+            >
+              <img
+                src={currentUser.avatar}
+                alt={currentUser.name}
+                className="w-6 h-6 rounded-full object-cover border border-zinc-200"
+              />
+              <span className="hidden md:inline text-[11px] font-bold text-zinc-800">
+                {currentUser.name.split(' ')[0]}
+              </span>
+            </button>
+          ) : (
+            <button
+              onClick={() => setIsLoginModalOpen(true)}
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-indigo-50 hover:bg-indigo-100 text-indigo-700 text-xs font-bold border border-indigo-200 transition-colors"
+            >
+              <LogIn className="w-3.5 h-3.5 text-indigo-600" />
+              <span className="hidden sm:inline">Sign In</span>
+            </button>
+          )}
 
           {/* Post a Project CTA */}
           <button
