@@ -68,18 +68,22 @@ export const LoginModal: React.FC = () => {
         {/* Header Banner */}
         <div className="p-6 bg-zinc-50 border-b border-zinc-100 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-2xl bg-indigo-600 text-white flex items-center justify-center shadow-md shadow-indigo-200 font-extrabold text-xl">
-              G
+            <div className="w-11 h-11 rounded-2xl bg-white border border-zinc-200 p-0.5 shadow-sm flex items-center justify-center overflow-hidden shrink-0">
+              <img
+                src="/techpunjab-logo.png"
+                alt="TechPunjab Logo"
+                className="w-full h-full object-contain"
+              />
             </div>
             <div>
               <div className="flex items-center gap-2">
-                <h3 className="text-base font-bold text-zinc-900">GigMint Secure Sign-In</h3>
-                <span className="text-[10px] uppercase font-mono font-bold bg-indigo-50 text-indigo-700 px-2 py-0.5 rounded-full border border-indigo-200">
-                  PSDM SSO
+                <h3 className="text-base font-extrabold text-zinc-900">TechPunjab Sign-In</h3>
+                <span className="text-[10px] uppercase font-mono font-bold bg-emerald-50 text-emerald-800 px-2 py-0.5 rounded-full border border-emerald-200">
+                  Govt. of Punjab SSO
                 </span>
               </div>
               <p className="text-xs text-zinc-500">
-                Govt. of Punjab Vocational Trainee & MSME Single Sign-On
+                Skilled Tech Workers • Vocational Trainee & MSME Portal
               </p>
             </div>
           </div>

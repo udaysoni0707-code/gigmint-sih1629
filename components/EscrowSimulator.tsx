@@ -89,8 +89,8 @@ export const EscrowSimulator: React.FC = () => {
             <div>
               <div className="flex items-center gap-2">
                 <h2 className="text-lg font-bold text-zinc-900">Native UPI Milestone Escrow Simulator</h2>
-                <span className="text-[10px] font-mono uppercase font-bold bg-indigo-50 text-indigo-700 px-2 py-0.5 rounded-full border border-indigo-200">
-                  SIH1629 Protocol
+                <span className="text-[10px] font-mono uppercase font-bold bg-emerald-50 text-emerald-800 px-2 py-0.5 rounded-full border border-emerald-200">
+                  TechPunjab Escrow Protocol
                 </span>
               </div>
               <p className="text-xs text-zinc-500">

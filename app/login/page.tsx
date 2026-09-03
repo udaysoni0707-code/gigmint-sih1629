@@ -53,17 +53,21 @@ export default function LoginPage() {
       {/* Top Navbar */}
       <div className="max-w-5xl mx-auto w-full flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2.5 group">
-          <div className="w-10 h-10 rounded-2xl bg-indigo-600 flex items-center justify-center text-white font-bold shadow-md shadow-indigo-200 group-hover:scale-105 transition-transform">
-            <span className="text-xl">G</span>
+          <div className="w-11 h-11 rounded-2xl bg-white border border-zinc-200 p-0.5 shadow-md shadow-zinc-200/50 flex items-center justify-center overflow-hidden group-hover:scale-105 transition-transform shrink-0">
+            <img
+              src="/techpunjab-logo.png"
+              alt="TechPunjab Logo"
+              className="w-full h-full object-contain"
+            />
           </div>
           <div>
             <div className="flex items-center gap-1.5">
-              <span className="font-bold text-lg text-zinc-900">GigMint</span>
-              <span className="text-[10px] uppercase font-mono font-semibold px-1.5 py-0.5 rounded-full bg-emerald-100 text-emerald-700 border border-emerald-200">
-                SIH 1629
+              <span className="font-extrabold text-lg text-zinc-900 group-hover:text-emerald-700 transition-colors">TechPunjab</span>
+              <span className="text-[10px] uppercase font-mono font-semibold px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 border border-emerald-200">
+                Govt. of Punjab
               </span>
             </div>
-            <p className="text-[10px] text-zinc-500 font-medium">Govt. of Punjab • Skill Mission Hub</p>
+            <p className="text-[10px] text-zinc-500 font-medium">Skilled Tech Workers • Stronger Future</p>
           </div>
         </Link>
 
@@ -81,11 +85,15 @@ export default function LoginPage() {
         <div className="bento-card p-6 sm:p-8 border border-zinc-200/80 shadow-bento">
           
           <div className="text-center mb-6">
-            <div className="w-12 h-12 rounded-2xl bg-indigo-50 border border-indigo-200 text-indigo-600 flex items-center justify-center mx-auto mb-3">
-              <Lock className="w-6 h-6" />
+            <div className="w-16 h-16 rounded-full bg-white border border-zinc-200 shadow-sm p-1.5 flex items-center justify-center mx-auto mb-3">
+              <img
+                src="/techpunjab-logo.png"
+                alt="TechPunjab Emblem"
+                className="w-full h-full object-contain"
+              />
             </div>
             <h1 className="text-2xl font-extrabold text-zinc-900 tracking-tight">
-              Sign In to GigMint
+              Sign In to TechPunjab
             </h1>
             <p className="text-xs text-zinc-500 mt-1">
               Punjab Skill Development Mission Verified Credentials
@@ -230,7 +238,7 @@ export default function LoginPage() {
 
       {/* Footer */}
       <div className="max-w-5xl mx-auto w-full text-center text-xs text-zinc-400">
-        Govt. of Punjab • Punjab Skill Development Mission • Smart India Hackathon #SIH1629
+        Govt. of Punjab • Punjab Skill Development Mission • TechPunjab Official Portal
       </div>
 
     </div>

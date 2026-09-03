@@ -3,8 +3,8 @@ import './globals.css';
 import { AppProvider } from '@/context/AppContext';
 
 export const metadata: Metadata = {
-  title: 'GigMint | Smart Freelance Platform (SIH1629 - Punjab Skill Development Mission)',
-  description: 'Next-generation freelance platform connecting PSDM-certified vocational trainees and developers with MSMEs. Featuring Bento Studio aesthetics, simulated native UPI milestone escrow, AI scoping, and on-chain skill verification.',
+  title: 'TechPunjab | Smart Freelance & MSME Platform (Govt. of Punjab)',
+  description: 'Next-generation freelance platform connecting PSDM-certified vocational trainees and skilled developers directly with MSMEs. Powered by TechPunjab, Govt. of Punjab.',
 };
 
 export default function RootLayout({

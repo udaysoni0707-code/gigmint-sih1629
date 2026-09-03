@@ -138,13 +138,17 @@ export default function Home() {
       {/* Footer */}
       <footer className="mt-16 border-t border-zinc-200/80 pt-8 pb-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-zinc-500">
-          <div className="flex items-center gap-2">
-            <div className="w-6 h-6 rounded-lg bg-indigo-600 text-white font-bold flex items-center justify-center text-xs">
-              G
+          <div className="flex items-center gap-2.5">
+            <div className="w-7 h-7 rounded-lg bg-white border border-zinc-200 p-0.5 flex items-center justify-center overflow-hidden">
+              <img
+                src="/techpunjab-logo.png"
+                alt="TechPunjab"
+                className="w-full h-full object-contain"
+              />
             </div>
-            <span className="font-bold text-zinc-900">GigMint</span>
-            <span>• Smart India Hackathon #SIH1629</span>
-            <span className="hidden sm:inline">• Punjab Skill Development Mission</span>
+            <span className="font-extrabold text-zinc-900">TechPunjab</span>
+            <span>• Govt. of Punjab</span>
+            <span className="hidden sm:inline">• Punjab Skill Development Mission (PSDM)</span>
           </div>
 
           <div className="flex items-center gap-4 text-[11px] font-mono">

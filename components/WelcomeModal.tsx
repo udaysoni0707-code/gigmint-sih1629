@@ -59,31 +59,39 @@ export const WelcomeModal: React.FC = () => {
         {/* Content Header with Prominent Logo */}
         <div className="p-6 sm:p-8 text-center flex flex-col items-center">
           
-          {/* Animated Glowing Logo Badge */}
-          <div className="relative mb-4 group cursor-pointer" onClick={() => showToast('✨ GigMint Protocol v1.0 • Punjab Skill Development Mission')}>
-            <div className="w-20 h-20 rounded-3xl p-1 bg-gradient-to-tr from-indigo-600 via-pink-500 to-emerald-400 shadow-xl shadow-indigo-200 animate-pulse-subtle flex items-center justify-center group-hover:scale-105 transition-transform">
-              <div className="w-full h-full bg-zinc-950 rounded-[20px] flex items-center justify-center text-white font-extrabold text-3xl shadow-inner">
-                <span className="bg-gradient-to-br from-white to-zinc-300 bg-clip-text text-transparent">G</span>
+          {/* Official TechPunjab Circular Emblem */}
+          <div className="relative mb-3 group cursor-pointer" onClick={() => showToast('✨ TechPunjab • Govt. of Punjab Skill Mission')}>
+            <div className="w-24 h-24 rounded-full p-1 bg-gradient-to-tr from-emerald-600 via-indigo-600 to-emerald-500 shadow-xl shadow-emerald-200/50 animate-pulse-subtle flex items-center justify-center group-hover:scale-105 transition-transform">
+              <div className="w-full h-full bg-white rounded-full flex items-center justify-center p-1.5 overflow-hidden shadow-inner">
+                <img
+                  src="/techpunjab-logo.png"
+                  alt="TechPunjab Government Emblem"
+                  className="w-full h-full object-contain"
+                />
               </div>
             </div>
-            <span className="absolute -bottom-1 -right-1 bg-emerald-500 text-white rounded-full p-1 border-2 border-white shadow-md">
+            <span className="absolute -bottom-1 -right-1 bg-emerald-600 text-white rounded-full p-1.5 border-2 border-white shadow-md">
               <ShieldCheck className="w-4 h-4" />
             </span>
           </div>
 
           <div className="flex items-center gap-2 mb-1">
-            <span className="text-xs uppercase font-mono font-bold tracking-wider px-3 py-1 rounded-full bg-indigo-50 text-indigo-700 border border-indigo-200 flex items-center gap-1.5">
+            <span className="text-xs uppercase font-mono font-bold tracking-wider px-3 py-1 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200 flex items-center gap-1.5">
               <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
-              Smart India Hackathon #SIH1629
+              Govt. of Punjab Official Portal
             </span>
           </div>
 
           <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-zinc-900 mt-1">
-            Welcome to <span className="bg-gradient-to-r from-indigo-600 via-pink-600 to-indigo-600 bg-clip-text text-transparent">GigMint</span>
+            Welcome to <span className="bg-gradient-to-r from-emerald-600 via-indigo-600 to-emerald-700 bg-clip-text text-transparent">TechPunjab</span>
           </h2>
 
-          <p className="text-xs sm:text-sm text-zinc-500 mt-2 max-w-md">
-            Punjab Skill Development Mission (Govt. of Punjab) verified smart gig portal connecting certified trainees directly with MSME employers.
+          <p className="text-xs font-semibold text-emerald-800 mt-1">
+            Skilled Tech Workers. Better Punjab. Stronger Future.
+          </p>
+
+          <p className="text-xs text-zinc-500 mt-1.5 max-w-md">
+            Punjab Skill Development Mission verified smart gig portal connecting certified trainees directly with MSME employers across Punjab.
           </p>
 
           {/* Key Feature Highlights Pill Strip */}

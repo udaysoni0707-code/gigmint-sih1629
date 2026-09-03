@@ -60,7 +60,7 @@ export const BentoGrid: React.FC = () => {
               {role === 'freelancer' ? 'Trainee & Freelancer Portal' : 'MSME & Industry Employer Portal'}
             </span>
             <span className="text-zinc-400 text-xs">•</span>
-            <span className="text-xs text-zinc-500 font-mono">Punjab Skill Mission #SIH1629</span>
+            <span className="text-xs text-zinc-500 font-mono">TechPunjab • Govt. of Punjab</span>
           </div>
           <h1 className="text-2xl sm:text-3xl font-bold tracking-tight text-zinc-900 mt-1">
             {role === 'freelancer' ? (

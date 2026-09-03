@@ -36,26 +36,30 @@ export const Navbar: React.FC = () => {
     <header className="sticky top-4 z-40 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full transition-all">
       <nav className="glass-pill rounded-full px-4 py-2.5 shadow-bento flex items-center justify-between border border-zinc-200/80">
         
-        {/* Brand Logo & PSDM Tag (Clicking pops up welcome window) */}
+        {/* Brand Logo & Tag (Clicking pops up welcome window) */}
         <div className="flex items-center gap-3">
           <button 
             onClick={() => setIsWelcomeModalOpen(true)}
             className="flex items-center gap-2.5 group text-left"
-            title="Click for GigMint & PSDM Overview"
+            title="Click for TechPunjab Overview"
           >
-            <div className="w-10 h-10 rounded-2xl bg-indigo-600 flex items-center justify-center text-white font-bold shadow-md shadow-indigo-200 group-hover:scale-105 transition-transform">
-              <span className="text-xl tracking-tight">G</span>
+            <div className="w-10 h-10 rounded-2xl bg-white border border-zinc-200/80 p-0.5 shadow-md shadow-zinc-200/60 flex items-center justify-center overflow-hidden group-hover:scale-105 transition-transform shrink-0">
+              <img
+                src="/techpunjab-logo.png"
+                alt="TechPunjab Logo"
+                className="w-full h-full object-contain rounded-xl"
+              />
             </div>
             <div>
               <div className="flex items-center gap-1.5">
-                <span className="font-bold text-lg tracking-tight text-zinc-900 group-hover:text-indigo-600 transition-colors">GigMint</span>
-                <span className="text-[10px] uppercase font-mono font-semibold px-1.5 py-0.5 rounded-full bg-emerald-100 text-emerald-700 border border-emerald-200 flex items-center gap-1">
+                <span className="font-extrabold text-lg tracking-tight text-zinc-900 group-hover:text-emerald-700 transition-colors">TechPunjab</span>
+                <span className="text-[10px] uppercase font-mono font-semibold px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 border border-emerald-200 flex items-center gap-1">
                   <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
-                  SIH 1629
+                  Govt. of Punjab
                 </span>
               </div>
               <p className="text-[10px] text-zinc-500 font-medium hidden sm:block">
-                Govt. of Punjab • Skill Mission Hub
+                Skilled Tech Workers • Stronger Future
               </p>
             </div>
           </button>

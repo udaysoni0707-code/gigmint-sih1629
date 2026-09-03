@@ -75,7 +75,7 @@ export const AIScoperModal: React.FC = () => {
   // Freelancer proposal tab
   const [activeSubTab, setActiveSubTab] = useState<'client_scope' | 'freelancer_pitch'>('client_scope');
   const [generatedPitch, setGeneratedPitch] = useState<string>(
-    `Respected Hiring Team,\n\nI reviewed your requirement for an "Automated Retail Inventory & Low-Stock Telemetry System". As a Punjab Skill Development Mission (PSDM NSQF-5) accredited full-stack engineer from MSDC Mohali, I have previously delivered a real-time freight analytics engine processing 45,000+ daily events.\n\nHere is how I will execute your 3 milestones:\n1. Stand up the PostgreSQL inventory schema & FastAPI endpoints within 4 days.\n2. Connect the Gemini API to forecast warehouse reorder points without costly overhead.\n3. Wrap the frontend in a responsive Next.js 14 Bento interface with native UPI escrow milestone checkpoints.\n\nReady to begin immediately under GigMint Smart Escrow.`
+    `Respected Hiring Team,\n\nI reviewed your requirement for an "Automated Retail Inventory & Low-Stock Telemetry System". As a Punjab Skill Development Mission (PSDM NSQF-5) accredited full-stack engineer from MSDC Mohali, I have previously delivered a real-time freight analytics engine processing 45,000+ daily events.\n\nHere is how I will execute your 3 milestones:\n1. Stand up the PostgreSQL inventory schema & FastAPI endpoints within 4 days.\n2. Connect the Gemini API to forecast warehouse reorder points without costly overhead.\n3. Wrap the frontend in a responsive Next.js 14 Bento interface with native UPI escrow milestone checkpoints.\n\nReady to begin immediately under TechPunjab Smart Escrow.`
   );
 
   if (!isScoperModalOpen) return null;

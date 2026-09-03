@@ -21,7 +21,7 @@ export const INITIAL_FREELANCER: FreelancerProfile = {
     metrics: 'Processed 45,000+ daily waybills with 99.98% uptime',
     clientReview: 5.0,
     tags: ['Next.js 14', 'PostgreSQL', 'Mapbox', 'Gemini 1.5'],
-    liveUrl: 'https://logistics-demo.psdm.gigmint.in',
+    liveUrl: 'https://logistics-demo.techpunjab.in',
     githubUrl: 'https://github.com/gurpreet-dev/punjab-freight-tracker',
   },
   certifications: [
@@ -54,7 +54,7 @@ export const INITIAL_FREELANCER: FreelancerProfile = {
 
 export const INITIAL_GIGS: GigProject[] = [
   {
-    id: 'gig-sih-001',
+    id: 'gig-techpb-001',
     title: 'Automated Inventory & Supply Chain Tracker for Retail MSME',
     clientName: 'Harjit Chawla',
     clientCompany: 'Amritsar AgroFoods & Retail Corp',
@@ -107,7 +107,7 @@ export const INITIAL_GIGS: GigProject[] = [
     ],
   },
   {
-    id: 'gig-sih-002',
+    id: 'gig-techpb-002',
     title: 'IoT Sensor Dashboard for Verka Cooperative Milk Chillers',
     clientName: 'Dr. Paramjit Dhillon',
     clientCompany: 'Punjab Cooperative Dairy Federation',
@@ -149,7 +149,7 @@ export const INITIAL_GIGS: GigProject[] = [
     ]
   },
   {
-    id: 'gig-sih-003',
+    id: 'gig-techpb-003',
     title: 'Export Compliance & Customs EDI Invoicing for Jalandhar Sports Cluster',
     clientName: 'Raman Sood',
     clientCompany: 'Vanguard Sports & Leatherworks',
@@ -195,7 +195,7 @@ export const INITIAL_GIGS: GigProject[] = [
 export const INITIAL_KANBAN_TASKS: KanbanTask[] = [
   {
     id: 'task-101',
-    gigId: 'gig-sih-001',
+    gigId: 'gig-techpb-001',
     title: 'Prisma DB Migration & Seed Initial Bins',
     milestoneTitle: 'Milestone 1: DB & APIs',
     payoutAmount: 5000,
@@ -207,7 +207,7 @@ export const INITIAL_KANBAN_TASKS: KanbanTask[] = [
   },
   {
     id: 'task-102',
-    gigId: 'gig-sih-001',
+    gigId: 'gig-techpb-001',
     title: 'Gemini 1.5 Prompt Engine for Stock Forecasting',
     milestoneTitle: 'Milestone 2: AI Forecasting',
     payoutAmount: 6000,
@@ -215,12 +215,12 @@ export const INITIAL_KANBAN_TASKS: KanbanTask[] = [
     priority: 'HIGH',
     assignee: 'Gurpreet Singh',
     githubUrl: 'https://github.com/gurpreet-dev/punjab-freight-tracker/pull/4',
-    figmaUrl: 'https://figma.com/@gigmint/inventory-preview',
+    figmaUrl: 'https://figma.com/@techpunjab/inventory-preview',
     dueDate: 'Today, 6:00 PM',
   },
   {
     id: 'task-103',
-    gigId: 'gig-sih-001',
+    gigId: 'gig-techpb-001',
     title: 'Low-Stock Realtime Webhook & Push Notifications',
     milestoneTitle: 'Milestone 2: AI Forecasting',
     payoutAmount: 4000,
@@ -232,7 +232,7 @@ export const INITIAL_KANBAN_TASKS: KanbanTask[] = [
   },
   {
     id: 'task-104',
-    gigId: 'gig-sih-001',
+    gigId: 'gig-techpb-001',
     title: 'Role-Based Access Control (RBAC) & OAuth2 Flow',
     milestoneTitle: 'Milestone 3: Auth & Handover',
     payoutAmount: 2500,
@@ -243,7 +243,7 @@ export const INITIAL_KANBAN_TASKS: KanbanTask[] = [
   },
   {
     id: 'task-105',
-    gigId: 'gig-sih-001',
+    gigId: 'gig-techpb-001',
     title: 'Docker Production Orchestration & SSL Deployment',
     milestoneTitle: 'Milestone 3: Auth & Handover',
     payoutAmount: 2500,
